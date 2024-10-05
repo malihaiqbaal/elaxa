@@ -1,0 +1,77 @@
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container styles */
+.container {
+    text-align: center;
+    background: white;
+    padding: 40px; /* Increased padding for a spacious look */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Container hover effect */
+.container:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Button styles */
+button {
+    padding: 12px 25px; /* Increased padding for larger buttons */
+    font-size: 20px; /* Larger font size */
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Subtle shadow for buttons */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+/* Response text styles */
+.response {
+    margin-top: 20px;
+    font-size: 20px;
+    opacity: 0; /* Initially hidden for animation */
+    transform: translateY(20px); /* Start slightly lower */
+    animation: fadeInUp 0.5s forwards; /* Apply fade-in animation */
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px; /* Adjust padding on smaller screens */
+    }
+    
+    button {
+        font-size: 16px; /* Smaller font size for buttons on small screens */
+        padding: 10px 20px; /* Adjust button padding */
+    }
+
+    .response {
+        font-size: 18px; /* Smaller font size for response */
+    }
+}
